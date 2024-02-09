@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Consulting.";
+}
+<style>
+body {
+    background-image: url('/images/kick.JPG');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+</style>
+
+<div class="title-cal">
+<div>
+    <h1>Fashion Consulting Calculator</h1>
+</div>
+</div>
+<div class ="calculator">
+<div>
+    <label for ="hours">Number of Hours Needed: </label>
+    <input type="number" id="hours"/>
+    <span class="error" style="color: red;"></span>
+</div>
+
+<div>
+    <label>Hourly Rate:</label>
+    <input type="text" id="hourlyRate" value="20" readonly />
+</div>
+
+<div>
+    <input type="submit" value="Calculate total" id="calculateTotal"/>
+</div>
+
+<div>
+    <label>Total:</label>
+    <br />
+    <span id="total"></span>
+</div>
+
+<div>
+    <a href="@Url.Action("Index", "Home")">Back to Home</a>
+</div>
+</div>
+<script src="~/js/site.js"></script>
